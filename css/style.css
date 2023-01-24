@@ -101,11 +101,11 @@ a {
 
 /*================= MODAL WINDOW =================*/
 
-.modal-ingredients {
-  opacity: 0;
-  visibility: hidden;
+.modal-window-buy-now {
+  /* opacity: 0;
+  visibility: hidden; */
 
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   width: 100%;
   max-width: 280px;
   height: 100%;
@@ -119,16 +119,16 @@ a {
 
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 28px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 29px;
   padding-top: 28px;
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
 }
 
-.modal-ingredients.active,
+.modal-window-buy-now.active,
 .overlay.active {
   opacity: 1;
   visibility: visible;
@@ -136,7 +136,7 @@ a {
 
 /*================= MODAL-WINDOW CLOSE BTN =================*/
 
-.modal-winwod-close-btn {
+.modal-window-close-btn {
   background-color: transparent;
   padding: 0;
   border: 0;
@@ -145,9 +145,8 @@ a {
   position: absolute;
   top: 16px;
   right: 15px;
-  cursor: pointer;
 }
-.modal-winwod-close-btn-icon {
+.modal-window-close-btn-icon {
   fill: #131313;
 }
 /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
@@ -161,8 +160,11 @@ a {
   color: #fff;
   border-radius: 3px;
 }
-
-.modal__title {
+.modal-buy-mow-header {
+  display: block;
+  margin-bottom: 20px;
+}
+/* .modal__title {
   position: relative;
   margin-bottom: 24px;
   font-family: var(--font-logo);
@@ -242,10 +244,10 @@ a {
   line-height: 1.4;
   color: var(--color-text);
   margin-bottom: 24px;
-}
-/*================= PRODUCTS-TABLE =================*/
+} */
+/* ================= PRODUCTS-TABLE ================= */
 
-.product-ingredients {
+/* .product-ingredients {
   width: 240px;
 }
 .product-ingredients-row {
@@ -255,19 +257,41 @@ a {
 }
 .product-ingredients-row.last {
   margin-bottom: 40px;
+} */
+
+.modal-window-purchase {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 82px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-window-purchase-item {
+  position: relative;
+
+  width: 132px;
+  height: 136px;
+  border: 2px solid;
+  border-color: #96af8c;
+  border-radius: 15px;
+}
+.modal-window-purchase-item-photo {
+  position: fixed;
+  transform: translate(0%, -50%);
 }
 
 /*================= SUBMIT-FORM =================*/
 
 .modal-window-input-field {
-  width: 240px;
-  height: 42px;
+  width: 224px;
+  height: 32px;
 
-  padding-top: 11px;
-  padding-left: 11px;
-  padding-bottom: 11px;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-bottom: 8px;
 
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   border: 1px solid;
   border-color: var(--color-backgraund);
@@ -287,14 +311,14 @@ a {
 
 .modal-window-input-field::placeholder {
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.4;
   color: var(--color-text);
 }
 .modal-window-input-field.user-message {
-  width: 240px;
-  height: 84px;
-  margin-bottom: 24px;
+  width: 224px;
+  height: 65px;
+  margin-bottom: 26px;
   resize: none;
 }
 
@@ -302,8 +326,12 @@ a {
 .modal-form-submit-btn {
   display: inline-block;
   align-self: center;
-  width: 132px;
-  height: 42px;
+  /* width: 114px;
+  height: 42px; */
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 34px;
+  padding-right: 34px;
 
   background: #f8d24e;
   border-radius: 10px;
@@ -311,8 +339,8 @@ a {
 
   font-family: var(--font-main);
   font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 1.25;
   color: #131313;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
